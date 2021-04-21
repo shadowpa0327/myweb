@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="hw2.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="annoymous">
+        <title>My home page</title>
+    </head>
+    
+
+    <!---
+        此部分為網頁上方的navagation bar , 預留做未來擴充網頁使用
+    -->
+    <body>
+        <header class="top-header">
+            <h2>MY Algorithm 程式筆記分享</h2>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+              <script language="javascript">
+                  //動態的更改class tag 來製作小視窗時的縮合式 navagation bar
+                  function myFunction() {
+                      var x = document.getElementById("myTopnav");
+                      if (x.className === "topnav") {
+                          x.style.display = "block"
+                          x.className += " responsive";
+                      } else {
+                          x.style.display = "none"
+                          x.className = "topnav";
+                      }
+                  }
+              </script>
+            <hr>
+        </header>
+        <div class="intro-header">
+            <div class="topnav" id="myTopnav">
+                <a href="#home">Home</a>
+                <a href="#Hw1"class="active">About Me</a>
+                <a href="#contact">Algorithm</a>
+                <a href="#about">Physics</a>
+                
+            </div>
+                
+
+        </div>
+        
+        <main>
+            <!--
+                left main box 主要是用來存放同一個關聯性頁面之間的跳轉連結
+            -->
+            <aside class="left-main-box">
+                <div class="container">
+                <h2>相關文章</h2>
+                <ul>
+                    <li><a  href="gameillustrator.html">我是連結1</a></li>
+                    <li><span class="active"></span><a href="hw2-0811514張機智.html"class="active"  >我是連結2</a></li>
+                    <li><a href="game_principle.html">我是連結3</a></li>
+                    <li><a href="gameillustrator.html">我是連結4444444444555555555</a></li>
+                </ul>
+                </div>
+                <div class="container">
+                    <h2>網頁資料統計</h2>
+                    <ul>
+                        <li><span>總瀏覽次數:<br>
+                            <script type= "text/javascript" >
+                                var caution= false
+                                function setCookie(name,value,expires,path,domain,secure)
+                                {
+                                    var curCookie=name+ "=" +escape(value) +
+                                    ((expires)? ";expires=" +expires.toGMTString() : "" ) +
+                                    ((path)? "; path=" + path : "" ) +
+                                    ((domain)? "; domain=" + domain : "" ) +
+                                    ((secure)? ";secure" : "" )
+                                    if (!caution||(name + "=" + escape(value)).length <= 4000)
+                                    {
+                                        document.cookie = curCookie
+                                    }
+                                    else if (confirm( "Cookie exceeds 4KB and will be cut!" ))
+                                    {
+                                        document.cookie = curCookie
+                                    }  
+                                }
+                                function getCookie(name)
+                                {
+                                    var prefix = name + "="
+                                    var cookieStartIndex = document.cookie.indexOf(prefix)
+                                    if (cookieStartIndex == -1)
+                                    {
+                                        return null
+                                    }
+                                    var cookieEndIndex=document.cookie.indexOf( ";" ,cookieStartIndex+prefix.length)
+                                    if (cookieEndIndex == -1)
+                                    {
+                                        cookieEndIndex = document.cookie.length
+                                    }
+                                    return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
+                                }
+                                function deleteCookie(name, path, domain)
+                                {
+                                    if (getCookie(name))
+                                    {
+                                        document.cookie = name + "=" +
+                                        ((path) ? "; path=" + path : "" ) +
+                                        ((domain) ? "; domain=" + domain : "" ) +
+                                        "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+                                    }
+                                }
+                                function fixDate(date)
+                                {
+                                    var base= new Date(0)
+                                    var skew=base.getTime()
+                                    if (skew>0)
+                                    {
+                                        date.setTime(date.getTime()-skew)
+                                    }
+                                }
+                                var now= new Date()
+                                fixDate(now)
+                                now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
+                                var visits = getCookie( "counter" )
+                                if (!visits)
+                                {
+                                    visits=1;
+                                }
+                                else
+                                {
+                                    visits=parseInt(visits)+1;
+                                }
+                                setCookie( "counter" , visits, now);
+                                document.write( visits +'<br>');
+                            </script></span></li>
+                        <li><span>總文章數</span></li>
+                        <li><span>我是連結3</span></li>
+                        <li><span>我是連結4444444444555555555</span></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class = "right-main-box" id = "right-main">
+                <section>
+                    <div class="container">
+                        <h1>自我介紹</h1>
+                        <p>My name is Chang-Chi-Chih . I am 20 years old,and now study in the Department of Material Science and Engineering in NYCU . This website contain some of my note and some solution to the confusing problem , I hope this site will help you on either homework or hobby.  </p>
+                    </div>
+                    <div class="container">
+                        <h1>學習經歷</h1>
+                        <table>
+                            <tr>
+                                <td>時間</td>
+                                <td>名稱</td>
+                                <td>地點</td>
+                                <td>心得</td>
+                            </tr>
+                            <tr>
+                                <td>2017.7~2019.7</td>
+                                <td>私立長榮高級中學</td>
+                                <td>台南</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017.7~2019.7</td>
+                                <td>成大物理培育計畫</td>
+                                <td>台南</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2019.7~2021.2</td>
+                                <td>交通大學-MSE</td>
+                                <td>新竹</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2021.2～Now</td>
+                                <td>陽明交通大學-MSE</td>
+                                <td>新竹</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="block">
+                        <h1>專業技能</h1>
+                        <ul class="listSkill">
+                          <li>
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                              <div class="p270"></div>
+                              <div class="p360"></div>
+                            </div>
+                            前端網頁開發(html/css/js)
+                          </li>
+                          <li>
+                            
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                              <div class="p270"></div>
+                            </div>
+                            C++
+                          </li>
+                          <li>
+                            
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                              <div class="p270"></div>
+                            </div>
+                            Python
+                          </li>
+                          <li>
+                            
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                              <div class="p270"></div>
+                            </div>
+                            PHP
+                          </li>
+                          <li>
+                            
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                              <div class="p270"></div>
+                            </div>
+                            HDL<br>
+                            (Verilog/VHDL)
+                          </li>
+                          <li>
+                            
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                              <div class="p270"></div>
+                              <div class="p360"></div>
+                            </div>
+                            資料庫管理</br>
+                            (MySQL/Marian DB)
+                          </li>
+                          <li>
+                            
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                            </div>
+                            原子級微磁模擬
+                          </li>
+                          <li>
+                            
+                            <div class="circle">
+                              <div class="p90"></div>
+                              <div class="p180"></div>
+                              <div class="p270"></div>
+                            </div>
+                            MRAM可靠度驗證
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <h1>程式筆記</h1>
+                        <ul class="Program-note">
+                          <li>
+                            <h2>C++</h2>
+                            <nav>
+                                <a>軟體安裝基礎語法教學</a>
+                                <a>物件導向程式設計</a>
+                            </nav>
+                          </li>
+                          <li>
+                            <h2>程式競賽</h2>
+                            <nav>
+                                <a>常用數論知識</a>
+                                <a>資料結構與演算法講解</a>
+                                <a>經典題目分類與題解</a>
+                            </nav>
+                          </li>
+                          <li>
+                            <h2>資料庫理論</h2>
+                            <nav>
+                                <a>Functional Dependency</a>
+                                <a>E-R model</a>
+                            </nav>
+                          </li>
+                        </ul>
+                      </div>
+                </section>
+                <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
+            </div>
+            
+            <div id="footer-class">
+                <hr>
+                <p>
+                    This is my first page in the NCTU <br>
+                    including some note about PHP ,C++ , SQL,Competetive Programming etc..<br>
+                    Hope this site can help more people <br>   
+                </p>
+                <nav>
+                    <a href="https://github.com/shadowpa0327"><i class="fab fa-github"></i></a>
+                </nav>
+                <div>
+                    <a href="mailto:brian1009.mse08@nctu.edu.tw">信箱</a><br>
+                    <span>版權所有翻印必究 &reg</span>
+                </div>
+                
+            <div>
+            
+        </main>
+        
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if(window.pageYOffset>200){
+            document.getElementById("myTopnav").style.position = "fixed";
+            document.getElementById("myTopnav").style.top = 0;
+
+        }
+        else{
+            document.getElementById("myTopnav").style.position = "static";
+        }
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("myTopnav").style.p;
+        } else {
+            document.getElementById("myTopnav").style.display = "block";
+        }
+        prevScrollpos = currentScrollPos;
+        }
+    </script>
+    
+    </body>
+</html>
+
+
+<!--
+<dl id="aboutME">
+    <dt>基本資料
+    <dd>姓名：張機智</dd>
+    <dd>學號：0811514</dd>
+    </dt>
+    <dt>興趣
+    <dd>寫程式</dd>
+    <dd>打game</dd>
+    </dt>
+</dl>
+-->
