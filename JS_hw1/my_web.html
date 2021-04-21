@@ -7,7 +7,6 @@
         <title>My home page</title>
     </head>
     
-
     <!---
         此部分為網頁上方的navagation bar , 預留做未來擴充網頁使用
     -->
@@ -48,93 +47,7 @@
             <!--
                 left main box 主要是用來存放同一個關聯性頁面之間的跳轉連結
             -->
-            <aside class="left-main-box">
-                <div class="container">
-                <h2>相關文章</h2>
-                <ul>
-                    <li><a  href="gameillustrator.html">我是連結1</a></li>
-                    <li><span class="active"></span><a href="hw2-0811514張機智.html"class="active"  >我是連結2</a></li>
-                    <li><a href="game_principle.html">我是連結3</a></li>
-                    <li><a href="gameillustrator.html">我是連結4444444444555555555</a></li>
-                </ul>
-                </div>
-                <div class="container">
-                    <h2>網頁資料統計</h2>
-                    <ul>
-                        <li><span>總瀏覽次數:<br>
-                            <script type= "text/javascript" >
-                                var caution= false
-                                function setCookie(name,value,expires,path,domain,secure)
-                                {
-                                    var curCookie=name+ "=" +escape(value) +
-                                    ((expires)? ";expires=" +expires.toGMTString() : "" ) +
-                                    ((path)? "; path=" + path : "" ) +
-                                    ((domain)? "; domain=" + domain : "" ) +
-                                    ((secure)? ";secure" : "" )
-                                    if (!caution||(name + "=" + escape(value)).length <= 4000)
-                                    {
-                                        document.cookie = curCookie
-                                    }
-                                    else if (confirm( "Cookie exceeds 4KB and will be cut!" ))
-                                    {
-                                        document.cookie = curCookie
-                                    }  
-                                }
-                                function getCookie(name)
-                                {
-                                    var prefix = name + "="
-                                    var cookieStartIndex = document.cookie.indexOf(prefix)
-                                    if (cookieStartIndex == -1)
-                                    {
-                                        return null
-                                    }
-                                    var cookieEndIndex=document.cookie.indexOf( ";" ,cookieStartIndex+prefix.length)
-                                    if (cookieEndIndex == -1)
-                                    {
-                                        cookieEndIndex = document.cookie.length
-                                    }
-                                    return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
-                                }
-                                function deleteCookie(name, path, domain)
-                                {
-                                    if (getCookie(name))
-                                    {
-                                        document.cookie = name + "=" +
-                                        ((path) ? "; path=" + path : "" ) +
-                                        ((domain) ? "; domain=" + domain : "" ) +
-                                        "; expires=Thu, 01-Jan-70 00:00:01 GMT"
-                                    }
-                                }
-                                function fixDate(date)
-                                {
-                                    var base= new Date(0)
-                                    var skew=base.getTime()
-                                    if (skew>0)
-                                    {
-                                        date.setTime(date.getTime()-skew)
-                                    }
-                                }
-                                var now= new Date()
-                                fixDate(now)
-                                now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
-                                var visits = getCookie( "counter" )
-                                if (!visits)
-                                {
-                                    visits=1;
-                                }
-                                else
-                                {
-                                    visits=parseInt(visits)+1;
-                                }
-                                setCookie( "counter" , visits, now);
-                                document.write( visits +'<br>');
-                            </script></span></li>
-                        <li><span>總文章數</span></li>
-                        <li><span>我是連結3</span></li>
-                        <li><span>我是連結4444444444555555555</span></li>
-                    </ul>
-                </div>
-            </aside>
+            
             <div class = "right-main-box" id = "right-main">
                 <section>
                     <div class="container">
@@ -169,6 +82,12 @@
                                 <td></td>
                             </tr>
                             <tr>
+                                <td>2020.9~2021.2</td>
+                                <td>台積電大專生研究獎學金-獲獎</td>
+                                <td>新竹</td>
+                                <td></td>
+                            </tr>
+                            <tr>
                                 <td>2021.2～Now</td>
                                 <td>陽明交通大學-MSE</td>
                                 <td>新竹</td>
@@ -176,15 +95,13 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="block">
+                    <div class="container">
                         <h1>專業技能</h1>
                         <ul class="listSkill">
                           <li>
                             <div class="circle">
                               <div class="p90"></div>
                               <div class="p180"></div>
-                              <div class="p270"></div>
-                              <div class="p360"></div>
                             </div>
                             前端網頁開發(html/css/js)
                           </li>
@@ -194,6 +111,7 @@
                               <div class="p90"></div>
                               <div class="p180"></div>
                               <div class="p270"></div>
+                              <div class="p360"></div>
                             </div>
                             C++
                           </li>
@@ -229,9 +147,6 @@
                             
                             <div class="circle">
                               <div class="p90"></div>
-                              <div class="p180"></div>
-                              <div class="p270"></div>
-                              <div class="p360"></div>
                             </div>
                             資料庫管理</br>
                             (MySQL/Marian DB)
@@ -256,35 +171,123 @@
                         </ul>
                     </div>
                     <div class="container">
-                        <h1>程式筆記</h1>
                         <ul class="Program-note">
+                        <h1>程式筆記</h1>
                           <li>
-                            <h2>C++</h2>
+                            <div>C++</div>
                             <nav>
-                                <a>軟體安裝基礎語法教學</a>
-                                <a>物件導向程式設計</a>
+                                <a href="#">軟體安裝基礎語法教學</a>
+                                <a href="#">物件導向程式設計</a>
                             </nav>
                           </li>
                           <li>
-                            <h2>程式競賽</h2>
+                            <div>程式競賽</div>
                             <nav>
-                                <a>常用數論知識</a>
-                                <a>資料結構與演算法講解</a>
-                                <a>經典題目分類與題解</a>
+                                <a href="#">常用數論知識</a>
+                                <a href="#">資料結構與演算法講解</a>
+                                <a href="#">經典題目分類與題解</a>
                             </nav>
                           </li>
                           <li>
-                            <h2>資料庫理論</h2>
+                            <div>資料庫理論</div>
                             <nav>
-                                <a>Functional Dependency</a>
-                                <a>E-R model</a>
+                                <a href="#">Functional Dependency</a>
+                                <a href="#">E-R model</a>
                             </nav>
                           </li>
                         </ul>
                       </div>
                 </section>
-                <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
             </div>
+            <aside class="left-main-box">
+                <div class="container">
+                    <h2>相關文章</h2>
+                    <div class="nd-container">
+                        <ul>
+                            <li><a  href="#">我是連結1</a></li>
+                            <li><span class="#"></span><a href="hw2-0811514張機智.html"class="active"  >我是連結2</a></li>
+                            <li><a href="#">我是連結3</a></li>
+                            <li><a href="#">我是連結4444444444555555555</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2>網頁資料統計</h2>
+                    <div class="nd-container">
+                        <ul>
+                            <li><span>總瀏覽次數:<br>
+                                <script type= "text/javascript" >
+                                    var caution= false
+                                    function setCookie(name,value,expires,path,domain,secure)
+                                    {
+                                        var curCookie=name+ "=" +escape(value) +
+                                        ((expires)? ";expires=" +expires.toGMTString() : "" ) +
+                                        ((path)? "; path=" + path : "" ) +
+                                        ((domain)? "; domain=" + domain : "" ) +
+                                        ((secure)? ";secure" : "" )
+                                        if (!caution||(name + "=" + escape(value)).length <= 4000)
+                                        {
+                                            document.cookie = curCookie
+                                        }
+                                        else if (confirm( "Cookie exceeds 4KB and will be cut!" ))
+                                        {
+                                            document.cookie = curCookie
+                                        }  
+                                    }
+                                    function getCookie(name)
+                                    {
+                                        var prefix = name + "="
+                                        var cookieStartIndex = document.cookie.indexOf(prefix)
+                                        if (cookieStartIndex == -1)
+                                        {
+                                            return null
+                                        }
+                                        var cookieEndIndex=document.cookie.indexOf( ";" ,cookieStartIndex+prefix.length)
+                                        if (cookieEndIndex == -1)
+                                        {
+                                            cookieEndIndex = document.cookie.length
+                                        }
+                                        return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
+                                    }
+                                    function deleteCookie(name, path, domain)
+                                    {
+                                        if (getCookie(name))
+                                        {
+                                            document.cookie = name + "=" +
+                                            ((path) ? "; path=" + path : "" ) +
+                                            ((domain) ? "; domain=" + domain : "" ) +
+                                            "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+                                        }
+                                    }
+                                    function fixDate(date)
+                                    {
+                                        var base= new Date(0)
+                                        var skew=base.getTime()
+                                        if (skew>0)
+                                        {
+                                            date.setTime(date.getTime()-skew)
+                                        }
+                                    }
+                                    var now= new Date()
+                                    fixDate(now)
+                                    now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
+                                    var visits = getCookie( "counter" )
+                                    if (!visits)
+                                    {
+                                        visits=1;
+                                    }
+                                    else
+                                    {
+                                        visits=parseInt(visits)+1;
+                                    }
+                                    setCookie( "counter" , visits, now);
+                                    document.write( visits +'<br>');
+                                </script></span></li>
+                            <li><span>總文章數:<br>1</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
             
             <div id="footer-class">
                 <hr>
@@ -305,28 +308,27 @@
             
         </main>
         
+    
+    <a href="#" id = "back_to_top"><i class="fas fa-chevron-up"></i></i></a>
+    </body>
     <script>
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
-        if(window.pageYOffset>200){
+        if(window.pageYOffset>400){
             document.getElementById("myTopnav").style.position = "fixed";
             document.getElementById("myTopnav").style.top = 0;
-
+            document.getElementById("back_to_top").style.opacity = 1;
         }
         else{
             document.getElementById("myTopnav").style.position = "static";
+            document.getElementById("back_to_top").style.opacity = 0;
         }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("myTopnav").style.p;
-        } else {
-            document.getElementById("myTopnav").style.display = "block";
+       
         }
-        prevScrollpos = currentScrollPos;
-        }
+            
     </script>
-    
-    </body>
+
 </html>
 
 
